@@ -1,4 +1,6 @@
 <?php
+
+    define('FS_METHOD', 'direct');
     foreach(glob(dirname(__FILE__) . '/' . 'wp-config.d/*.php') as $config) {
         include($config);
     }
