@@ -5,10 +5,11 @@ services:
     build: .
     environment:
       - WORDPRESS_DEBUG=true
-      - WORDPRESS_DB_USER=the_db_user
-      - WORDPRESS_DB_PASSWORD=the_db_pass
-      - WORDPRESS_DB_NAME=the_db_name
-      - WORDPRESS_SITEURL=http://localhost:8080
+      - QOVERY_DATABASE_WORDPRESS_USERNAME=the_db_user
+      - QOVERY_DATABASE_WORDPRESS_PASSWORD=the_db_pass
+      - QOVERY_DATABASE_WORDPRESS_NAME=the_db_name
+      - QOVERY_DATABASE_WORDPRESS_HOST=mysql
+      - QOVERY_ROUTER_MAIN_UX221RHILDRED_URL=http://localhost:8080
     ports:
       - "8080:80"
 

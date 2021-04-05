@@ -3,6 +3,8 @@ application:
   name: "ux221rhildred"
   project: "ux221rhildred"
   organization: "QoveryCommunity"
+  publicly_accessible: true
+  port: 80
   storage:
   - name: "uploads"
     size: "20"
