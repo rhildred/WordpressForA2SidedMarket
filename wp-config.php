@@ -15,3 +15,11 @@
             define('WP_SITEURL', $proto . $_SERVER['SERVER_NAME']);
         }
     }
+
+    if(!defined('WP_HOME')) {
+        if (getenv('QOVERY_ROUTER_MAIN_UX221RHILDRED_URL')) {
+            define('WP_HOME', getenv('QOVERY_ROUTER_MAIN_UX221RHILDRED_URL'));
+        } else {
+            define('WP_HOME', $proto . $_SERVER['SERVER_NAME']);
+        }
+    }

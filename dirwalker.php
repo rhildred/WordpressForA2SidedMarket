@@ -15,7 +15,7 @@ function dirToArray($dir) {
           if ($value == "uploads"){
                 chdir($dir);
                 echo("copying images from " . $dir);
-//                echo(shell_exec("cp -r uploads " . $sRootDir . "/apr3combined/wp-content/"));
+                echo(shell_exec("cp -r uploads " . $sRootDir . "/apr3combined/wp-content/"));
                 chdir($sRootDir);
                 
             }
