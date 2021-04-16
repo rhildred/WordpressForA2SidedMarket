@@ -2,7 +2,9 @@
 application:
   name: "wordpressfora2sidedmarket"
   project: "genericwp"
-  organization: "QoveryCommunity"
+  publicly_accessible: true
+  port: 80
+
   storage:
   - name: "uploads"
     size: "10"
