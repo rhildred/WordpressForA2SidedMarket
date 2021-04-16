@@ -1,0 +1,22 @@
+---
+application:
+  name: "ux221rhildred"
+  project: "ux221rhildred"
+  organization: "QoveryCommunity"
+  publicly_accessible: true
+  port: 80
+  storage:
+  - name: "uploads"
+    size: "20"
+    type: "ssd"
+    mount_point: "/var/www/html/wp-content/uploads"
+databases:
+- type: "MYSQL"
+  name: "wordpress"
+  version: "8.0"
+routers:
+- name: "main-ux221rhildred"
+  routes:
+  - application_name: "ux221rhildred"
+    paths:
+    - "/*"
