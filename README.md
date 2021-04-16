@@ -11,5 +11,13 @@ The parts of this project:
 2. 5 posts with media moved from the main page to be landing pages to help people to find kits from Google. Write the posts also with the editotial angle of how kits help deal with stress
 3. 5 sample kit products with media in Woo Commerce
 4. plugin for main page that takes a kit maker to the shopping page and kit developers to a registration page
-5. a registration page with room for a 100 word summary of why the potential developer would provide good kits
-6. as well as a starter plugin, this is a project for putting wordpress on qovery.com, a container as a service platform. Deploy this easily on qovery.com
+5. a registration page with room for a 100 word summary of why the potential developer would provide good kits. When a user completes the registration page it is up to the administrator to give them permissions for the shop manager role that they can use to create kits in woocommerce.
+6. as well as a starter plugin, this is a project for putting wordpress on qovery.com, a container as a service platform. Deploy this easily on qovery.com.
+
+## Quick start
+
+To test on localhost you will need docker.io or docker-desktop
+
+To put on qovery you will need the qovery cli
+
+Then run `qovery application env list` to find your environment variables and change them in the ./wp-config.php file to match
