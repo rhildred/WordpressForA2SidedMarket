@@ -9,16 +9,16 @@
 
 
     if(!defined('WP_SITEURL')) {
-        if (getenv('QOVERY_ROUTER_MAIN_UX221RHILDRED_URL')) {
-            define('WP_SITEURL', getenv('QOVERY_ROUTER_MAIN_UX221RHILDRED_URL'));
+        if (getenv('QOVERY_ROUTER_MAIN_WORDPRESSFORA2SIDEDMARKET_URL')) {
+            define('WP_SITEURL', getenv('QOVERY_ROUTER_MAIN_WORDPRESSFORA2SIDEDMARKET_URL'));
         } else {
             define('WP_SITEURL', $proto . $_SERVER['SERVER_NAME']);
         }
     }
 
     if(!defined('WP_HOME')) {
-        if (getenv('QOVERY_ROUTER_MAIN_UX221RHILDRED_URL')) {
-            define('WP_HOME', getenv('QOVERY_ROUTER_MAIN_UX221RHILDRED_URL'));
+        if (getenv('QOVERY_ROUTER_MAIN_WORDPRESSFORA2SIDEDMARKET_URL')) {
+            define('WP_HOME', getenv('QOVERY_ROUTER_MAIN_WORDPRESSFORA2SIDEDMARKET_URL'));
         } else {
             define('WP_HOME', $proto . $_SERVER['SERVER_NAME']);
         }
