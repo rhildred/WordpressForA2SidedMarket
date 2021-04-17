@@ -13,7 +13,7 @@ RUN wp core download --path=/var/www/html/ \
     && mkdir -p /var/www/html/wp-config.d
 COPY ./root/var/www/html/wp-config.php /var/www/html/
 COPY wp-config.php /var/www/html/wp-config.d
-COPY do_chown.sh /docker-entrypoint-extra/
+COPY ./root/do_chown.sh /docker-entrypoint-extra/
 COPY . /var/www/html/wp-content/plugins/split-market
 
 

@@ -21,3 +21,21 @@ To test on localhost you will need docker.io or docker-desktop
 To put on qovery you will need the qovery cli
 
 Then run `qovery application env list` to find your environment variables and change them in the ./wp-config.php file to match
+
+# WordPress Docker Image
+
+This is an image to help on plugins and themes development, but it
+can be used to host a WordPress site as well. There are some tools
+and nice librarys included, like *OPCache*, *X-Debug* and *WP-Cli*.
+
+## Overriding variables not defined on wp-config.php
+
+You can mount a folder with your configuration at `/var/www/html/wp-config.d`. All php files on that directory will be included on `wp-config.php`. You can also override variables present on default `wp-config.php`. You can also override the docker entrypoint by putting files in /docker-entrypoint-extra/ of the image. See ./root/do_chown.sh in the Dockerfile.
+
+## Development environment
+
+There are a WordPress installed at `/var/www/html`. So if you want
+to develop a plugin, you can mount your content mapping your plugin
+folder in `/var/www/html/wp-content/plugins`.
+
+
