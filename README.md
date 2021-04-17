@@ -16,13 +16,23 @@ The parts of this project:
 
 ## Quick start
 
-To test on localhost you will need docker.io or docker-desktop
+This can be used as a plugin by downloading the .zip and installing it as a plugin.
 
-To put on qovery you will need the qovery cli
+## Less quick start
 
-Then run `qovery application env list` to find your environment variables and change them in the ./wp-config.php file to match
+To test as a complete environment on localhost you will need docker.io or docker-desktop as well as docker-compose. In the root folder run `docker-compose build && docker-compose up`. Surf to [http://localhost:8080](http://localhost:8080)
 
-# WordPress Docker Image
+## To deploy publicly on qovery.com
+
+1. You will need to fork this repo in to your own github.
+
+2. Setup in a project in qovery.com
+
+3. Install the qovery cli `curl -s https://get.qovery.com | sudo bash`
+
+Then run `qovery application env list` to find your environment variables and change them in the ./wp-config.php file to match.
+
+# Embedded WordPress Docker Image
 
 This is an image to help on plugins and themes development, but it
 can be used to host a WordPress site as well. There are some tools
@@ -34,8 +44,6 @@ You can mount a folder with your configuration at `/var/www/html/wp-config.d`. A
 
 ## Development environment
 
-There are a WordPress installed at `/var/www/html`. So if you want
+There is a WordPress installed at `/var/www/html`. So if you want
 to develop a plugin, you can mount your content mapping your plugin
 folder in `/var/www/html/wp-content/plugins`.
-
-
