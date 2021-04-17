@@ -28,9 +28,22 @@ To test as a complete environment on localhost you will need docker.io or docker
 
 2. Setup in a project in qovery.com
 
-3. Install the qovery cli `curl -s https://get.qovery.com | sudo bash`
+3. Clone to your local development environment
 
-Then run `qovery application env list` to find your environment variables and change them in the ./wp-config.php file to match.
+4. Edit ./qovery.yml to include:
+```
+application:
+  ...
+  publicly_accessible: true
+  port: 80
+
+  storage:
+  ...
+
+```
+5. Install the qovery cli `curl -s https://get.qovery.com | sudo bash`
+
+Then run `qovery application env list` to find your environment variables and change them in the ./wp-config.php file to match. When you do your next push it will be re-deployed on qovery.
 
 # Embedded WordPress Docker Image
 
