@@ -9,7 +9,9 @@ services:
       - QOVERY_DATABASE_WORDPRESS_PASSWORD=the_db_pass
       - QOVERY_DATABASE_WORDPRESS_NAME=the_db_name
       - QOVERY_DATABASE_WORDPRESS_HOST=mysql
-      - QOVERY_ROUTER_MAIN_UX221RHILDRED_URL=http://localhost:8080
+      - QOVERY_ROUTER_MAIN_WORDPRESSFORA2SIDEDMARKET_URL=http://localhost:8080
+    volumes:
+      - .:/var/www/html/wp-content/plugins/split-market
     ports:
       - "8080:80"
 

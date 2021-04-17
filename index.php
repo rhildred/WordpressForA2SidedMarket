@@ -4,11 +4,24 @@ Plugin Name: Split Call To Action
 */
 add_action('init', function() {
     add_shortcode('split-plugin',function($atts = [], $content = null){
-        return $content . <<<'EOT'
-<div class="row">
-<div class="col-md-6">I am just a poor boy</div>
-<div class="col-md-6">From a poor family</div>
-</div>
+        $content .= "<script>var atts = " .
+        json_encode($atts) .
+        "</script>";
+        return $content . <<<EOT
+    <div class="row">
+        <div class="col-md-6 equal">
+            <p>I am just a poor boy, From a poor family, Spare me my life, For this one atrocity.</p>
+            <div class="btn-wrap">
+                <a class="btn btn-primary" href="{$atts['url1']}">Learn more</a>
+            </div>
+        </div>
+        <div class="col-md-6 equal">
+            <p>Easy come, easy go, will you let me go?</p>
+            <div class="btn-wrap">
+                <a class="btn btn-primary" href="{$atts['url2']}">Learn more</a>
+            </div>
+        </div>
+    </div>
 EOT;
 
     });
